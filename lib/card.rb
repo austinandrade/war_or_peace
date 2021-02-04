@@ -1,10 +1,10 @@
-
+# require 'pry'
 
 class Card
-  attr_accessor :name, :suite, :number
-  def initialize (name, suite, number)
-    @name = name
-    @suite = suite
-    @number = number
+  attr_accessor :suit, :value, :rank
+  def initialize (suit, value, rank)
+    @suit = suit
+    @value = value
+    @rank = rank
   end
 end
