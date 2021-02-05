@@ -1,4 +1,4 @@
-# require 'pry'
+require 'pry'
 
 class Deck
   attr_reader :cards
@@ -13,13 +13,27 @@ class Deck
   end
 
   def high_ranking_cards
-    high_bucket = []
-    @cards.rank.each {|x| >= 11}
-    # if @cards[0].rank >= 11
-    #   asdf
-    # elsif @cards[1].rank >= 11
-    #   asdf
-    # elsif @cards[2].rank >= 11
-    #   asdf
+    result = []
+    @cards.each do |card|
+      if card.rank >= 11
+        result << card
+      end
+      # result << card if card.rank >= 11
+    end
+    result
+  end
+
+  def percent_high_ranking
+    round = high_ranking_cards.count.to_f / @cards.count.to_f * 100
+    round.round(2)
+  end
+
+  # def remove_card
+  #   binding.pry
+  #   @cards.shift
+  #
+  # end
+
+
 
 end
