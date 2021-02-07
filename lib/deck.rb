@@ -9,7 +9,6 @@ class Deck
 
   def rank_of_card_at(index)
     @cards[index].rank
-    # binding.pry
   end
 
   def high_ranking_cards
@@ -28,12 +27,12 @@ class Deck
     round.round(2)
   end
 
-  # def remove_card
-  #   binding.pry
-  #   @cards.shift
-  #
-  # end
+  def remove_card
+    @cards.shift
+  end
 
-
+  def add_card(new_card)
+    @cards << new_card
+  end
 
 end
